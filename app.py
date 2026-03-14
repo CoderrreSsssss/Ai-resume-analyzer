@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 import re
 from collections import Counter
 
-st.set_page_config(page_title="AI Resume Analyzer", page_icon="🚀", layout="wide")
+st.set_page_config(page_title="AI Resume Analyzer", page_icon="", layout="wide")
 
-st.title("🚀 AI Resume Analyzer Pro")
+st.title(" AI Resume Analyzer Pro")
 st.write("Upload your resume and get instant AI-powered analysis, ATS score, and skill insights.")
 
 uploaded_file = st.file_uploader("Upload Resume (PDF)", type="pdf")
@@ -46,7 +46,7 @@ if uploaded_file:
 
     st.divider()
 
-    st.subheader("🧠 Skill Detection")
+    st.subheader(" Skill Detection")
 
     found_skills = []
 
@@ -72,7 +72,7 @@ if uploaded_file:
 
     st.divider()
 
-    st.subheader("📊 Resume Skill Score")
+    st.subheader(" Resume Skill Score")
 
     skill_score = int((len(found_skills)/len(skills))*100)
 
@@ -89,7 +89,7 @@ if uploaded_file:
 
     st.divider()
 
-    st.subheader("📈 Skill Visualization")
+    st.subheader(" Skill Visualization")
 
     values = [1 if s in found_skills else 0 for s in skills]
 
@@ -101,7 +101,7 @@ if uploaded_file:
 
     st.divider()
 
-    st.subheader("🤖 ATS Resume Score")
+    st.subheader(" ATS Resume Score")
 
     ats_score = 0
 
@@ -130,7 +130,7 @@ if uploaded_file:
 
     st.divider()
 
-    st.subheader("📌 Action Word Analysis")
+    st.subheader(" Action Word Analysis")
 
     words = re.findall(r'\b\w+\b', text_lower)
 
@@ -194,7 +194,7 @@ if uploaded_file:
 
     st.divider()
 
-    st.subheader("📊 Resume Word Frequency")
+    st.subheader(" Resume Word Frequency")
 
     common = counter.most_common(10)
 
@@ -222,4 +222,4 @@ Features:
 - AI improvement suggestions
 """)
 
-st.sidebar.write("Built with Python & Streamlit 🚀")
+st.sidebar.write("Built with Python & Streamlit ")
